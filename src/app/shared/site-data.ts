@@ -2,9 +2,11 @@ export const SITE = {
   name: 'Rohit S.',
   role: 'Full-Stack Engineer',
   email: 'rohitsali96@gmail.com',
+  phone: '+91 73876 46842',
   linkedin: 'https://www.linkedin.com/in/rohits2000/',
   x: 'https://x.com/rohitsio',
   instagram: 'https://www.instagram.com/rohit_ds2000',
+  youtube: 'https://www.youtube.com/@rohitsalitrader',
 };
 
 export const NAV_LINKS = [

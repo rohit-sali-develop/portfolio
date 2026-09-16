@@ -45,10 +45,14 @@
 }
 
 .contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 32px;
 }
 
-.contact__email {
+.contact__email,
+.contact__phone {
   font-family: var(--font-mono);
   font-size: 0.95rem;
   padding: 16px 30px;
