@@ -1,0 +1,79 @@
+.contact__panel {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 72px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface);
+  background-image: var(--pattern-dots);
+
+  // Flat accent rule along the top edge
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+.contact__panel .section-tag {
+  justify-content: center;
+}
+
+.contact__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+
+.contact__lead {
+  color: var(--text-2);
+  max-width: 480px;
+  margin-bottom: 36px;
+  font-size: 1.02rem;
+}
+
+.contact__actions {
+  margin-bottom: 32px;
+}
+
+.contact__email {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: 16px 30px;
+}
+
+.contact__socials {
+  display: flex;
+  gap: 12px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-0);
+    border: 1px solid var(--border-strong);
+    color: var(--text-1);
+    font-size: 0.88rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  }
+}

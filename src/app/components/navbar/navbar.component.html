@@ -1,0 +1,35 @@
+<header class="navbar" [class.scrolled]="scrolled()">
+  <div class="container navbar__inner">
+    <a href="#home" class="navbar__logo" (click)="closeMenu()">
+      <span class="navbar__logo-mark">RS</span>
+      <span class="navbar__logo-text">{{ site.name }}</span>
+    </a>
+
+    <nav class="navbar__links">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" [class.is-active]="active() === link.href">{{ link.label }}</a>
+      }
+    </nav>
+
+    <a class="btn btn-primary navbar__cta" href="#contact">Let's talk</a>
+
+    <button
+      class="navbar__toggle"
+      type="button"
+      [class.is-open]="menuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="navbar__mobile" [class.is-open]="menuOpen()">
+    @for (link of links; track link.href) {
+      <a [href]="link.href" [class.is-active]="active() === link.href" (click)="closeMenu()">{{ link.label }}</a>
+    }
+    <a class="btn btn-primary" href="#contact" (click)="closeMenu()">Let's talk</a>
+  </nav>
+</header>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Matches the navbar logo mark: orange rounded square, "RS" in the mono face -->
+  <rect width="64" height="64" rx="14" fill="#f2801e"/>
+  <text x="32" y="41" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="27" font-weight="700" fill="#1a0e04" letter-spacing="-1">RS</text>
+</svg>

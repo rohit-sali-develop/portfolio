@@ -1,0 +1,136 @@
+<section id="home" class="hero">
+  <div class="hero__pattern" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__greeting">
+        <span class="hero__dot"></span>
+        Open to Forward Deployed Engineer roles
+      </p>
+
+      <h1 class="hero__title">
+        Hi, I'm <span class="hero__name">{{ site.name }}</span>
+      </h1>
+
+      <h2 class="hero__role">{{ site.role }}</h2>
+
+      <p class="hero__lead">
+        I take a problem from "what does the user actually need?" to running in
+        production — schema, API, UI, integrations, and the cloud infra
+        underneath. I founded and built
+        <strong>TradeXJournal</strong> solo: an AI-powered trading platform
+        wired into a live broker, a payment gateway, and an LLM, running on
+        Azure today.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="hero__socials">
+        <a [href]="'mailto:' + site.email" aria-label="Email">
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2.5" />
+            <path d="m3 6.5 9 6 9-6" />
+          </svg>
+        </a>
+        <a
+          [href]="site.linkedin"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+            />
+          </svg>
+        </a>
+        <a
+          [href]="site.x"
+          target="_blank"
+          rel="noopener"
+          aria-label="X (Twitter)"
+        >
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"
+            />
+          </svg>
+        </a>
+        <a
+          [href]="site.instagram"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+            <circle cx="12" cy="12" r="4.2" />
+            <circle
+              cx="17.4"
+              cy="6.6"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__panel">
+      <div class="hero__card">
+        <div class="hero__card-bar">
+          <div class="hero__card-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="hero__card-file">dev.ts</span>
+        </div>
+        <pre
+          class="hero__card-code"
+        ><code><span class="tok-kw">const</span> <span class="tok-var">dev</span> = &#123;
+  name: <span class="tok-str">'Rohit S.'</span>,
+  role: <span class="tok-str">'Full-Stack Engineer'</span>,
+  stack: [<span class="tok-str">'Angular'</span>, <span class="tok-str">'.NET'</span>, <span class="tok-str">'Next.js'</span>, <span class="tok-str">'Azure'</span>],
+  scope: <span class="tok-str">'schema → production'</span>,
+  building: [<span class="tok-str">'TradeXJournal'</span>, <span class="tok-str">'Personalize Algo'</span>],
+&#125;;</code></pre>
+      </div>
+      <div class="hero__badge">
+        <span class="hero__badge-live"></span>
+        Live: tradexjournal.co · algo engine trading NSE
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+    >
+      <path d="M12 4v16M6 14l6 6 6-6" />
+    </svg>
+  </a>
+</section>

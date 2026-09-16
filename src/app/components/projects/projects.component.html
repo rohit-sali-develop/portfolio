@@ -1,0 +1,138 @@
+<section id="projects" class="section projects">
+  <div class="container">
+    <span class="section-tag">03 · Projects</span>
+    <h2 class="section-title" appReveal>Built, shipped, <em>and running</em></h2>
+    <p class="section-lead" appReveal>
+      Products I built and operate solo — from the schema up to the broker integrations and the
+      infrastructure they run on.
+    </p>
+
+    <div class="projects__list">
+      @for (project of projects; track project.name; let i = $index) {
+        <article class="project card" appReveal>
+          <!-- ── Head ─────────────────────────────────────────── -->
+          <header class="project__head">
+            <div class="project__head-main">
+              <div class="project__kicker">
+                <span class="project__index">0{{ i + 1 }}</span>
+                <span class="project__flag">{{ project.flag }}</span>
+              </div>
+              <h3 class="project__name">{{ project.name }}</h3>
+              <p class="project__tagline">{{ project.tagline }}</p>
+              <p class="project__meta">
+                @for (item of project.meta; track item; let last = $last) {
+                  <span>{{ item }}</span>
+                  @if (!last) {
+                    <span class="project__meta-sep" aria-hidden="true">·</span>
+                  }
+                }
+              </p>
+            </div>
+
+            <div class="project__head-aside">
+              @if (project.liveUrl) {
+                <a class="btn btn-primary" [href]="project.liveUrl" target="_blank" rel="noopener">
+                  Visit live site
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              } @else {
+                <span class="project__status">
+                  <span class="project__status-dot"></span>
+                  Private · live with real capital
+                </span>
+              }
+            </div>
+          </header>
+
+          <!-- ── Preview + copy ───────────────────────────────── -->
+          <div class="project__body">
+            <div class="project__visual">
+              <div class="window">
+                <div class="window__bar">
+                  <div class="window__dots"><span></span><span></span><span></span></div>
+                  <span class="window__title">{{ project.visualTitle }}</span>
+                </div>
+
+                @switch (project.visual) {
+                  @case ('dashboard') {
+                    <div class="dash" aria-hidden="true">
+                      <div class="dash__stats">
+                        @for (stat of dashStats; track stat.label) {
+                          <div class="dash__stat">
+                            <span class="dash__stat-label">{{ stat.label }}</span>
+                            <span class="dash__meter"><span [style.width.%]="stat.fill"></span></span>
+                          </div>
+                        }
+                      </div>
+                      <div class="dash__chart">
+                        <span class="dash__chart-label">Equity curve</span>
+                        <svg viewBox="0 0 200 64" preserveAspectRatio="none">
+                          <polygon [attr.points]="'0,64 ' + equityPoints + ' 200,64'" class="dash__area" />
+                          <polyline [attr.points]="equityPoints" class="dash__line" />
+                        </svg>
+                      </div>
+                      <div class="dash__heat">
+                        @for (level of heatCells; track $index) {
+                          <span [class]="'dash__cell dash__cell--' + level"></span>
+                        }
+                      </div>
+                    </div>
+                  }
+                  @case ('terminal') {
+                    <div class="term" aria-hidden="true">
+                      @for (line of logLines; track $index) {
+                        <div class="term__line">
+                          <span class="term__time">{{ line.time }}</span>
+                          <span class="term__tag">{{ line.tag }}</span>
+                          <span class="term__msg">{{ line.msg }}</span>
+                        </div>
+                      }
+                      <div class="term__line">
+                        <span class="term__time">15:10</span>
+                        <span class="term__tag">idle</span>
+                        <span class="term__msg">waiting for 09:15 IST <span class="term__cursor"></span></span>
+                      </div>
+                    </div>
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="project__copy">
+              <p class="project__desc">{{ project.description }}</p>
+
+              @if (!project.liveUrl && project.privateNote) {
+                <p class="project__private">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  {{ project.privateNote }}
+                </p>
+              }
+
+              <div class="project__stack">
+                <span class="project__label">Stack</span>
+                <div class="project__tech">
+                  @for (t of project.tech; track t) {
+                    <span>{{ t }}</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Highlights ───────────────────────────────────── -->
+          <div class="project__highlights">
+            <span class="project__label">What I built</span>
+            <ul class="project__grid">
+              @for (h of project.highlights; track h.title) {
+                <li>
+                  <h4>{{ h.title }}</h4>
+                  <p>{{ h.detail }}</p>
+                </li>
+              }
+            </ul>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

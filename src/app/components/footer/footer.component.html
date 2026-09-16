@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">© {{ year }} {{ site.name }}. Built with Angular.</p>
+
+    <nav class="footer__links">
+      @for (link of links; track link.href) {
+        <a [href]="link.href">{{ link.label }}</a>
+      }
+    </nav>
+
+    <a href="#home" class="footer__top" aria-label="Back to top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+  </div>
+</footer>
