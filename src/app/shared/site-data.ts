@@ -188,3 +188,68 @@ export const PROJECTS: Project[] = [
     privateNote: 'Single-tenant and private — runs live against a real broker account. Happy to walk through the code on a call.',
   },
 ];
+
+export interface Tool {
+  name: string;
+  domain: string;
+  tagline: string;
+  url: string;
+}
+
+/** Smaller tools & micro-apps I've shipped and run. */
+export const TOOLS: Tool[] = [
+  {
+    name: 'The QR Code Generator',
+    domain: 'theqrcodegenerator.app',
+    tagline: 'Create custom QR codes for links, text, Wi-Fi and more.',
+    url: 'https://theqrcodegenerator.app',
+  },
+  {
+    name: 'Is It Down Right Now',
+    domain: 'itisdownrightnow.co',
+    tagline: 'Check whether a website is down for everyone or just you.',
+    url: 'https://itisdownrightnow.co',
+  },
+  {
+    name: 'My Document Tools',
+    domain: 'mydocumenttools.com',
+    tagline: 'Convert, merge and edit PDFs and documents in the browser.',
+    url: 'https://mydocumenttools.com',
+  },
+  {
+    name: 'Home Loan Calculator',
+    domain: 'thehomeloancalculator.com',
+    tagline: 'Estimate EMIs, total interest and amortization on a home loan.',
+    url: 'https://thehomeloancalculator.com',
+  },
+  {
+    name: 'Compound Interest Calculator',
+    domain: 'realcompoundinterestcalculator.com',
+    tagline: 'Project how savings and investments grow with compounding.',
+    url: 'https://realcompoundinterestcalculator.com',
+  },
+  {
+    name: 'World Clock',
+    domain: 'wclock.app',
+    tagline: 'Compare the current time across time zones at a glance.',
+    url: 'https://wclock.app',
+  },
+  {
+    name: 'Domain Age Checker',
+    domain: 'thedomainage.com',
+    tagline: 'Look up how old any domain is and its registration history.',
+    url: 'https://thedomainage.com',
+  },
+  {
+    name: 'Screen Resolution',
+    domain: 'whatismyscreenresolution.co',
+    tagline: 'Instantly detect your screen resolution and viewport size.',
+    url: 'https://whatismyscreenresolution.co',
+  },
+  {
+    name: 'Fix My Speakers',
+    domain: 'fixmyspeakerssound.com',
+    tagline: 'Play a sound to eject water and clear dust from device speakers.',
+    url: 'https://fixmyspeakerssound.com',
+  },
+];

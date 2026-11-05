@@ -7,6 +7,42 @@
       infrastructure they run on.
     </p>
 
+    <!-- ── Live tools & micro-apps ────────────────────────── -->
+    <div class="tools" appReveal>
+      <div class="tools__head">
+        <h3 class="tools__title">Live tools &amp; micro-apps</h3>
+        <p class="tools__lead">
+          Smaller web tools I've built, shipped and run — each live and usable right now.
+        </p>
+      </div>
+
+      <div class="tools__table-wrap">
+        <table class="tools__table">
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">What it does</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (tool of tools; track tool.url) {
+              <tr>
+                <td class="tools__cell-name">{{ tool.name }}</td>
+                <td class="tools__cell-desc">{{ tool.tagline }}</td>
+                <td class="tools__cell-link">
+                  <a [href]="tool.url" target="_blank" rel="noopener">
+                    {{ tool.domain }}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="projects__list">
       @for (project of projects; track project.name; let i = $index) {
         <article class="project card" appReveal>

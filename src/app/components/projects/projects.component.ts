@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RevealDirective } from '../../core/reveal.directive';
-import { PROJECTS } from '../../shared/site-data';
+import { PROJECTS, TOOLS } from '../../shared/site-data';
 
 /** Illustrative content for the preview panels — decorative, not real data. */
 interface DashStat {
@@ -23,6 +23,7 @@ interface LogLine {
 })
 export class ProjectsComponent {
   readonly projects = PROJECTS;
+  readonly tools = TOOLS;
 
   readonly dashStats: DashStat[] = [
     { label: 'Win rate', fill: 62 },
