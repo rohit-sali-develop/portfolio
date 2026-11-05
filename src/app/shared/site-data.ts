@@ -206,9 +206,9 @@ export const TOOLS: Tool[] = [
   },
   {
     name: 'Is It Down Right Now',
-    domain: 'itisdownrightnow.co',
+    domain: 'isitdownrightnow.site',
     tagline: 'Check whether a website is down for everyone or just you.',
-    url: 'https://itisdownrightnow.co',
+    url: 'https://isitdownrightnow.site',
   },
   {
     name: 'My Document Tools',
